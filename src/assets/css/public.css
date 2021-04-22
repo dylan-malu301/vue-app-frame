@@ -1,0 +1,244 @@
+/* 禁用iPhone中Safari的字号自动调整 /
+/ 解决IOS默认滑动很卡的情况 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling : touch;
+  }
+  /* 禁止缩放表单 */
+  input[type=“submit”], input[type=“reset”], input[type=“button”], input {
+  resize: none;
+  border: none;
+  }
+  
+  /* 取消链接高亮 */
+  body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  /* 设置HTML5元素为块 */
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+  
+  /* 图片自适应 */
+  img {
+  width: 100%;
+  height: auto;
+  width: auto\9; 
+  display: block;
+  -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+  }
+  
+  /* 初始化 */
+  body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  }
+  body {
+  font: 12px/1.5 Arial, Helvetica, 'Avenir', sans-serif;  
+  color: #555;
+  background-color: #f4f4f4;
+  }
+  em, i {
+  font-style: normal;
+  }
+  ul,li{
+  list-style-type: none;
+  }
+  strong {
+  font-weight: normal;
+  }
+  .clearfix:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  }
+  .clearfix {
+  zoom: 1;
+  }
+  a {
+  text-decoration: none;
+  color: #969696;
+  font-family: Tahoma, Arial, sans-serif;
+  }
+  a:hover {
+  text-decoration: none;
+  }
+  ul, ol {
+  list-style: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  }
+  img {
+  border: none;
+  }
+  input::-webkit-input-placeholder{
+    color:#8d9291;
+  }
+  input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#8d9291;
+  }
+  input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#8d9291;
+  }
+  input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#8d9291;
+  }
+  /* /单行溢出/ */
+  .one-txt-cut{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  }
+  /* /多行溢出 手机端使用// 移动端点击a链接出现蓝色背景问题解决 */ 
+  .txt-cut{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  }
+  
+  a:link,a:active,a:visited,a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  }
+  
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) { 
+    #app .retina-border::before{
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+    }
+    #app .hairline::after{
+      transform: scaleY(0.5);
+    }
+  }
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) { 
+    #app .retina-border::before{
+      width: 300%;
+      height: 300%;
+      transform: scale(0.33333);
+    }
+    #app .hairline::after{
+      transform: scaleY(0.3333);
+    }
+  }
+  /*
+  * vant样式覆盖
+  */
+  #app .van-ellipsis>div{
+    font-size: .28rem;
+  }
+  #app .van-picker__cancel{
+    font-size: 0.32rem;
+    color: #28d093;
+  }
+  #app .van-picker__confirm{
+    font-size: 0.32rem;
+    color: #28d093;
+  }
+  #app .van-picker__title{
+    font-size: 0.32rem;
+    color: #000000;
+  }
+  #app .van-picker-column__item{
+    font-size: 0.34rem;
+    color: #333333;
+  }
+  #app .van-picker-column__item.van-picker-column__item--selected{
+    font-size: 0.4rem;
+    color: #000000;
+  }
+  #app .van-list__finished-text{
+    display: none;
+  }
+  #app .van-picker__toolbar{
+    height: 0.88rem;
+    position: relative;
+  }
+  #app .van-picker__toolbar::after{
+    content: '';
+    width: 100%;
+    height: 1Px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #c8c7cc;
+    transform: scaleY(0.5);
+  }
+  #app .van-collapse-item__title{
+    padding: 0 0.32rem 0;
+    height: 0.84rem;
+    align-items: center;
+  }
+  #app .van-collapse-item{
+    border-bottom: 1px solid #eeeeee;
+  }
+  #app [class*=van-hairline]::after{
+    border: 0 solid #c8c7cc;
+    border-width: 1px 0;
+  }
+  #app .van-picker__frame{
+    left: 0;
+    right: 0;
+  }
+  #app .van-collapse.van-hairline--top-bottom::after{
+    border: none;
+  }
+  #app .van-swipe .van-swipe-item{
+    height: 5rem;
+  }
+  /* 日历样式 */
+  #app .calendar_title_date_time{
+    display: none;
+  }
+  #app .calendar_title_date{
+    width: 50%;
+    box-sizing: border-box;
+  }
+  #app .calendar_confirm{
+    width: 50%;
+    margin: 0;
+    font-size: 0.28rem;
+    text-align: center;
+    color: #333333;
+  }
+  #app .calendar_title_date_year{
+  font-size: 0.28rem;
+  font-weight: normal;
+  color: #333333;
+  }
+  #app .calendar_day_checked{
+  background: #008d95;
+  }
+  #app .calendar_title{
+  background: #ffffff;
+  border-bottom: none;
+  }
+  #app .calendar_item{
+  position: relative;
+  /* border-bottom: 1px solid #eee; */
+  }
+  #app .calendar_dot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  }
+  #app .calendar_day{
+  font-size: 0.34rem;
+  }
+  #app .calendar_day.calendar_first_today{
+  color: inherit;
+  font-size: 0.28rem;
+  }
+  #app .calendar_week .calendar_day{
+  font-size: 0.26rem;
+  }

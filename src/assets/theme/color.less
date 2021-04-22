@@ -1,0 +1,42 @@
+.setTheme(@mainColor: #333333, @textColor: #ffffff, @buttonColor: #333333){
+  .top-nav-background {
+    background: @mainColor !important;
+  }
+  .van-nav-bar {
+    background: @mainColor;
+  }
+  .van-picker__confirm {
+    color: @textColor;
+  }
+  .van-picker__cancel {
+    color: @textColor;
+  }
+  .hairline { // 底部border线
+    position: relative;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 1Px;
+        position: absolute;
+        background: #c8c7cc;
+        bottom: 0;
+        left: 0;
+        transform: scaleY(0.5);
+    }
+  }
+  .retina-border{
+    position: relative;
+    &::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-origin: left top;
+      box-sizing: border-box;
+      pointer-events: none;
+      border-width: 1Px;
+      border-style: solid;
+      border-color: #c8c7cc;
+    }
+  }
+}
